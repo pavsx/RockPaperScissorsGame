@@ -1,7 +1,16 @@
 import java.util.Scanner;
 import java.util.Random;
-
-public class Main {
+/**
+ * The Rock Paper Scissors program implements the
+ * rock paper scissors game which allows the user to
+ * play with the computer.It displays the Winner along with
+ * the game's stats
+ *
+ * @author  Pavithraa Paramasivarasa
+ * @version 1.0
+ * @since   13-02-2023
+ */
+public class RockPaperScissors {
 
     public static final int ROCK = 1;
     public static final int PAPER = 2;
@@ -17,6 +26,13 @@ public class Main {
     public static int computerWins = 0;
     public static int draws = 0;
 
+    /**
+     *This method is used to retrieve the
+     * computer's choice between rock,paper and scissors.
+     * If and else if statements are used to display to the user
+     * the computer's choice.
+     * @return int returns the computer's choice.
+     */
     public static int getComputerChoice() {
         Random randomInt = new Random();
         int computerInt = 1 + randomInt.nextInt(4 - 1);
@@ -31,12 +47,23 @@ public class Main {
 
     }
 
+    /**
+     *This method is used to retrieve the
+     * player's choice between rock,paper and scissors.
+     *
+     * @return int returns the user's choice.
+     */
+
     public static int getPlayerChoice() {
         System.out.println("Please enter you move! Select 1 for ROCK,2 for PAPER,3 for SCISSORS");
         Scanner userInput = new Scanner(System.in);
         int playerChoice = userInput.nextInt();
         return playerChoice;
     }
+
+    /**
+     * This method implements 
+     */
     public static void rockPaperScissorsGame() {
         Scanner readingRounds = new Scanner(System.in);
 
@@ -82,7 +109,7 @@ public class Main {
 
 
             }
-            int gameStats[] = {userWins, computerWins, draws};
+            int[] gameStats = {userWins, computerWins, draws};
             System.out.println("The number of wins for the Player: " + userWins);
             System.out.println("The number of wins for the Computer: " + computerWins);
             System.out.println("The number of Draws " + draws);
@@ -120,7 +147,7 @@ public class Main {
 /*        Scanner readingRounds = new Scanner(System.in);
 
 
-        System.out.println("Please enter the number of Rounds you will like to play: ");
+        System.out.println("Please enter the number of Rounds you would like to play: ");
         int noOfRounds = readingRounds.nextInt();
         if (noOfRounds > 10) {
             System.out.println("EXIT Game");
