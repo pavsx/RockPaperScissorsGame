@@ -66,7 +66,7 @@ public class RockPaperScissors {
      * scissors game.The user is asked how many rounds they would
      * like to play.
      * Depending on the number rounds the user would play,the game is iterated.
-     * Depending on the winning stragety, the scores are added to the user or computer.
+     * Depending on the winning strategy, the scores are added to the user or computer.
      * Once the round is complete,the winner of the overall is determined and displayed.
      */
     public static void rockPaperScissorsGame() {
@@ -94,7 +94,7 @@ public class RockPaperScissors {
 
                     userWins = userWins + 1;
 
-                } else if (userChoice == ROCK & computerChoice == PAPER) {
+                } else if (userChoice == PAPER & computerChoice == ROCK) {
                     userWins = userWins + 1;
 
                 } else if (userChoice == ROCK & computerChoice == ROCK) {
