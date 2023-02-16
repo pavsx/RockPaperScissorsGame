@@ -62,7 +62,12 @@ public class RockPaperScissors {
     }
 
     /**
-     * This method implements 
+     * This method implements the logic of the rock paper
+     * scissors game.The user is asked how many rounds they would
+     * like to play.
+     * Depending on the number rounds the user would play,the game is iterated.
+     * Depending on the winning stragety, the scores are added to the user or computer.
+     * Once the round is complete,the winner of the overall is determined and displayed.
      */
     public static void rockPaperScissorsGame() {
         Scanner readingRounds = new Scanner(System.in);
@@ -126,7 +131,13 @@ public class RockPaperScissors {
         }
     }
 
-    //public static
+    /**
+     * This is the main method.The rock paper scissors game takes place.
+     * Once the game has finished.The user was asked to play again and depending
+     * on the user input the game is takes place again.
+     * If the user chooses not to play the Program quits.
+     * @param args
+     */
     public static void main(String[] args) {
 
         rockPaperScissorsGame();
@@ -141,68 +152,7 @@ public class RockPaperScissors {
             System.out.println("Thank you for Playing!");
             System.exit(0);
         }
-        //TODO:back up on github
 
-
-/*        Scanner readingRounds = new Scanner(System.in);
-
-
-        System.out.println("Please enter the number of Rounds you would like to play: ");
-        int noOfRounds = readingRounds.nextInt();
-        if (noOfRounds > 10) {
-            System.out.println("EXIT Game");
-            //break;
-        } else if (noOfRounds < 1) {
-            System.out.print("EXIT GAME");
-
-        } else {
-            for (int i = 1; i <= noOfRounds; i++) {
-
-                int userChoice = getPlayerChoice();
-                int computerChoice = 3;
-                if (userChoice == ROCK & computerChoice == SCISSORS) {
-                    System.out.println("The USER WON");
-                    userWins = userWins + 1;
-
-                } else if (userChoice == SCISSORS & computerChoice == PAPER) {
-
-                    userWins = userWins + 1;
-                    System.out.println("The user WINS!");
-                } else if (userChoice == ROCK & computerChoice == PAPER) {
-                    userWins = userWins + 1;
-                    System.out.println("The user WINS!");
-                } else if (userChoice == ROCK & computerChoice == ROCK) {
-                    draws = draws + 1;
-                    System.out.println("IT IS A DRAW");
-                } else if (userChoice == PAPER & computerChoice == PAPER) {
-                    draws = draws + 1;
-                    System.out.println("IT IS A DRAW");
-                } else if (userChoice == SCISSORS & computerChoice == SCISSORS) {
-                    draws = draws + 1;
-                    System.out.println("IT IS A DRAW");
-                } else {
-                    //System.out.println("Computer WINS");
-                    computerWins = computerWins + 1;
-                    System.out.println("THE COMPUTER WINS");
-                }
-
-
-
-            }
-            int gameStats[]={userWins,computerWins,draws};
-            System.out.println("The number of wins for the Player: "+userWins);
-            System.out.println("The number of wins for the Computer: "+computerWins);
-            System.out.println("The number of Draws "+draws);
-            //PRINT THE NUMBER OF USERWINS,COMPUTERWINS AND DRAWS
-            System.out.println();
-            if (gameStats[0]>gameStats[1]){
-                    System.out.println("YOU HAVE WON THE GAME!");
-            }else if(gameStats[1]>gameStats[0]){
-                System.out.println("THE COMPUTER HAS WON THE GAME!");
-
-            }else if(gameStats[0]==gameStats[1]){
-                System.out.println("BOTH PLAYER AND COMPUTER HAVE THE SAME NUMBER OF WINS! ");
-            }*/
 
         }
     }
